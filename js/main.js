@@ -7,7 +7,8 @@ let awayScore = "";
 const app = new Vue({
     el: '#test',
     data: {
-        score: ''
+        Hscore: '',
+        Ascore: ''
     },
     created () {
         fetch("http://www.nfl.com/liveupdate/scores/scores.json")
@@ -18,7 +19,8 @@ const app = new Vue({
             homeScore = chosenGame.home.score.T;
             //awayTeam = 
             awayScore = chosenGame.away.score.T;
-            this.score = homeScore + "-" + awayScore;
+            this.Hscore = homeScore;
+            this.Ascore = awayScore;
             }))
     }
 })
