@@ -4,10 +4,16 @@
     </head>
 
     <body>
-        <h1 id="test">{{ score }}</h1>
+        <h1 id="test">
+            <ul>
+                <li v-for="score in scores">
+                    {{score}}                   
+                </li>
+            </ul>
+        </h1>
 
-        <script src="./vue.js"></script>
-        <script src="./main.js"></script>
+        <script src="./js/vue.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>
 
