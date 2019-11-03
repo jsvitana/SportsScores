@@ -1,10 +1,17 @@
 let score = "";
-let game = toString(2019102400)
 //const url = "http://www.nfl.com/liveupdate/game-center/2019102100/2019102100_gtd.json"
 
-fetch("http://www.nfl.com/liveupdate/scores/scores.json")
-.then((resp) => resp.json()
-.then((data) => {
-    score = data;
-    alert(score);
-    }))
+const app = new Vue({
+    el: '#test',
+    data: {
+        message: 'this'
+    },
+    created () {
+        fetch("http://www.nfl.com/liveupdate/scores/scores.json")
+        .then((resp) => resp.json()
+        .then((data) => {
+            this.message = data[Object.keys(data)[0]].home.abbr;
+            }))
+    }
+})
+
