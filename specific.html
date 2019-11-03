@@ -6,24 +6,83 @@
 
     <body>
         <div class="row" id="test">
-                <div class="col s65">
-
-                </div>
-                <div class="col s65">
-
-                </div>
-            <div class="col s5">
-                <h1>{{ Hscore }}</h1>
+            <!--Clock-->
+            <div class="col s12">
+                <h6>Time left in the Quarter: {{ clock }}</h6>
             </div>
-            <div class="col s2">
-                <h2>VS</h2>
+            <!--Down-->
+            <div class="col s12">
+                <h6>Current Down: {{ down }}</h6>
             </div>
-            <div class="col s5">
-                <h1>{{ Ascore }}</h1>
+            <!--Yards to go-->
+            <div class="col s12">
+                <h6>Yards to go: {{ togo }}</h6>
+            </div>
+            <!--Name of Teams-->
+            <div class="col s4">
+                <h5>Home</h5>
+                <h2>{{ Hname }}</h2>
+            </div>
+            <div class="col s4">
+                <h3>VS</h3>
+            </div>
+            <div class="col s4">
+                <h5>Away</h5>
+                <h2>{{ Aname }}</h2>
+            </div>
+            <!--First Quarter Score-->
+            <div class="col s4">
+                <h2>{{ HFS }}</h2>
+            </div>
+            <div class="col s4">
+                <h4>First Quarter Score</h4>
+            </div>
+            <div class="col s4">
+                <h2>{{ AFS }}</h2>
+            </div>
+            <!--Second Quarter Score-->
+            <div class="col s4">
+                <h2>{{ HSS }}</h2>
+            </div>
+            <div class="col s4">
+                <h4>Second Quarter Score</h4>
+            </div>
+            <div class="col s4">
+                <h2>{{ ASS }}</h2>
+            </div>
+            <!--Third Quarter Score-->
+            <div class="col s4">
+                <h2>{{ HTS }}</h2>
+            </div>
+            <div class="col s4">
+                <h4>Third Quarter Score</h4>
+            </div>
+            <div class="col s4">
+                <h2>{{ ATS }}</h2>
+            </div>
+            <!--Fourth Quarter Score-->
+            <div class="col s4">
+                <h2>{{ HFS }}</h2>
+            </div>
+            <div class="col s4">
+                <h4>Fourth Quarter Score</h4>
+            </div>
+            <div class="col s4">
+                <h2>{{ AFS }}</h2>
+            </div>
+            <!--Total Score-->
+            <div class="col s4">
+                <h2>{{ HST }}</h2>
+            </div>
+            <div class="col s4">
+                <h4>Total Score</h4>
+            </div>
+            <div class="col s4">
+                <h2>{{ AST }}</h2>
             </div>
         </div>
             <script src="./js/vue.js"></script>
-            <script src="./js/main.js"></script>
+            <script src="./js/SpifMain.js"></script>
     </body>
 </html>
 

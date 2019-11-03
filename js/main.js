@@ -18,7 +18,7 @@ const app = new Vue({
             {
                 let chosenGame = data[Object.keys(data)[i]];
 
-                homeTeam = chosenGame.home.abbr;
+                homeTeam = data.home.abbr;
                 homeScore = chosenGame.home.score.T;
                 awayTeam = chosenGame.away.abbr;
                 awayScore = chosenGame.away.score.T;
