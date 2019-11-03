@@ -2,26 +2,37 @@ let homeTeam = "";
 let homeScore = "";
 let awayTeam = "";
 let awayScore = "";
-//const url = "http://www.nfl.com/liveupdate/game-center/2019102100/2019102100_gtd.json"
+let test;
+const url = "http://www.nfl.com/liveupdate/game-center/2019102100/2019102100_gtd.json"
 
 const app = new Vue({
     el: '#test',
     data: {
-        Hscore: '',
-        Ascore: ''
+        scores: []
     },
     created () {
         fetch("http://www.nfl.com/liveupdate/scores/scores.json")
         .then((resp) => resp.json()
         .then((data) => {
-            let chosenGame = data[Object.keys(data)[0]];
-            //homeTeam = 
-            homeScore = chosenGame.home.score.T;
-            //awayTeam = 
-            awayScore = chosenGame.away.score.T;
-            this.Hscore = homeScore;
-            this.Ascore = awayScore;
-            }))
+            for(var i = 0;i<Object.keys(data).length;i++)
+            {
+                let chosenGame = data[Object.keys(data)[i]];
+
+                homeTeam = chosenGame.home.abbr;
+                homeScore = chosenGame.home.score.T;
+                awayTeam = chosenGame.away.abbr;
+                awayScore = chosenGame.away.score.T;
+
+                if(homeScore === null) {
+                    homeScore = 0;
+                }
+                if(awayScore === null) {
+                    awayScore = 0;
+                }
+    
+                this.scores.push(awayTeam + ":" + awayScore + " vs " + homeTeam + ":" + homeScore);
+            }
+        }))
     }
 })
 
