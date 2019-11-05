@@ -1,29 +1,34 @@
 const url = "http://www.nfl.com/liveupdate/game-center/2019102100/2019102100_gtd.json"
 
 const app = new Vue({
-    el: '#test',
+    el: '#FootballData',
     data: {
-        togo: '',
-        down: '',
-        clock: '',
-        Hname: '',
-        Aname: '',
-        HFS: '',
-        AFS: '',
-        HSS: '',
-        ASS: '',
-        HTS: '',
-        ATS: '',
-        HFS: '',
-        AFS: '',
-        HST: '',
-        AST: ''
+        temp: {},
+        object: {
+            togo: '',
+            down: '',
+            clock: '',
+            Hname: 'test',
+            Aname: '',
+            HFS: '',
+            AFS: '',
+            HSS: '',
+            ASS: '',
+            HTS: '',
+            ATS: '',
+            HFS: '',
+            AFS: '',
+            HST: '',
+            AST: ''
+        }
     },
     created () {
         fetch("http://www.nfl.com/liveupdate/scores/scores.json")
         .then((resp) => resp.json()
         .then((data) => {
-            let chosenGame = data[Object.keys(data)[0]];
+            this.temp = (data[Object.keys(data)[0]].home.abbr);
+            
+            let chosenGame = data[Object.keys(data)[3]];
             time = chosenGame.clock === null ? time = 0 : time = chosenGame.clock;
             down2 = chosenGame.down === null ? down2 = 0 : down2 = chosenGame.down;
             yardToGo = chosenGame.togo === null ? yardToGo = 0 : yardToGo = chosenGame.togo;
@@ -109,22 +114,22 @@ const app = new Vue({
             else if (awayName == ""){awayName = "";}
             else if (awayName == ""){awayName = "";}
             //else{awayName = "An Error has occured";}
-
-            this.Hname = homeName;
-            this.HST = homeScoreTotal;
-            this.HFS = homeFirstScore;
-            this.HSS = homeSecondScore;
-            this.HTS = homeThirdScore;
-            this.HFS = homeFourthScore;
-            this.Aname = awayName;
-            this.AST = awayScoreTotal;
-            this.AFS = awayFirstScore;
-            this.ASS = awaySecondScore;
-            this.ATS = awayThirdScore;
-            this.AFS = awayFourthScore;
-            this.clock = time;
-            this.down = down2;
-            this.togo = yardToGo;
+            
+            this.object.Hname = homeName;
+            this.object.HST = homeScoreTotal;
+            this.object.HFS = homeFirstScore;
+            this.object.HSS = homeSecondScore;
+            this.object.HTS = homeThirdScore;
+            this.object.HFS = homeFourthScore;
+            this.object.Aname = awayName;
+            this.object.AST = awayScoreTotal;
+            this.object.AFS = awayFirstScore;
+            this.object.ASS = awaySecondScore;
+            this.object.ATS = awayThirdScore;
+            this.object.AFS = awayFourthScore;
+            this.object.clock = time;
+            this.object.down = down2;
+            this.object.togo = yardToGo;
             }))
     }
 })

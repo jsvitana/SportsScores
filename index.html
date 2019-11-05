@@ -7,14 +7,18 @@
     <body>
         <h1 id="test">
             <ul>
-                <li v-for="score in scores">
-                    {{score}}                   
+                <li v-for="(score, gameNum) in scores">
+                    <a href="specific.html">
+                        {{score}}
+                        {{gameNum}}           
+                    </a>
                 </li>
             </ul>
         </h1>
 
         <script src="./js/vue.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/SpifMain.js"></script>
     </body>
 </html>
 

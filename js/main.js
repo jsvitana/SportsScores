@@ -3,6 +3,7 @@ let homeScore = "";
 let awayTeam = "";
 let awayScore = "";
 let test;
+let gameNum = 0;
 const url = "http://www.nfl.com/liveupdate/game-center/2019102100/2019102100_gtd.json"
 
 const app = new Vue({
@@ -17,8 +18,9 @@ const app = new Vue({
             for(var i = 0;i<Object.keys(data).length;i++)
             {
                 let chosenGame = data[Object.keys(data)[i]];
-
-                homeTeam = data.home.abbr;
+                
+                gameNum = i;
+                homeTeam = chosenGame.home.abbr;
                 homeScore = chosenGame.home.score.T;
                 awayTeam = chosenGame.away.abbr;
                 awayScore = chosenGame.away.score.T;

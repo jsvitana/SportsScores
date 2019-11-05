@@ -5,84 +5,85 @@
     </head>
 
     <body>
-        <div class="row" id="test">
+        <div class="row" id="FootballData">
             <!--Clock-->
             <div class="col s12">
-                <h6>Time left in the Quarter: {{ clock }}</h6>
+                <h6>Time left in the Quarter: {{ object.clock }}</h6>
             </div>
             <!--Down-->
             <div class="col s12">
-                <h6>Current Down: {{ down }}</h6>
+                <h6>Current Down: {{ object.down }}</h6>
             </div>
             <!--Yards to go-->
             <div class="col s12">
-                <h6>Yards to go: {{ togo }}</h6>
+                <h6>Yards to go: {{ object.togo }}</h6>
             </div>
             <!--Name of Teams-->
             <div class="col s4">
                 <h5>Home</h5>
-                <h4>{{ Hname }}</h4>
+                <h4>{{ object.Hname }}</h4>
             </div>
             <div class="col s4">
                 <h3>VS</h3>
             </div>
             <div class="col s4">
                 <h5>Away</h5>
-                <h4>{{ Aname }}</h4>
+                <h4>{{ object.Aname }}</h4>
             </div>
             <!--First Quarter Score-->
             <div class="col s4">
-                <h2>{{ HFS }}</h2>
+                <h2>{{ object.HFS }}</h2>
             </div>
             <div class="col s4">
                 <h4>First Quarter Score</h4>
             </div>
             <div class="col s4">
-                <h2>{{ AFS }}</h2>
+                <h2>{{ object.AFS }}</h2>
             </div>
             <!--Second Quarter Score-->
             <div class="col s4">
-                <h2>{{ HSS }}</h2>
+                <h2>{{ object.HSS }}</h2>
             </div>
             <div class="col s4">
                 <h4>Second Quarter Score</h4>
             </div>
             <div class="col s4">
-                <h2>{{ ASS }}</h2>
+                <h2>{{ object.ASS }}</h2>
             </div>
             <!--Third Quarter Score-->
             <div class="col s4">
-                <h2>{{ HTS }}</h2>
+                <h2>{{ object.HTS }}</h2>
             </div>
             <div class="col s4">
                 <h4>Third Quarter Score</h4>
             </div>
             <div class="col s4">
-                <h2>{{ ATS }}</h2>
+                <h2>{{ object.ATS }}</h2>
             </div>
             <!--Fourth Quarter Score-->
             <div class="col s4">
-                <h2>{{ HFS }}</h2>
+                <h2>{{ object.HFS }}</h2>
             </div>
             <div class="col s4">
                 <h4>Fourth Quarter Score</h4>
             </div>
             <div class="col s4">
-                <h2>{{ AFS }}</h2>
+                <h2>{{ object.AFS }}</h2>
             </div>
             <!--Total Score-->
             <div class="col s4">
-                <h2>{{ HST }}</h2>
+                <h2>{{ object.HST }}</h2>
             </div>
             <div class="col s4">
                 <h4>Total Score</h4>
             </div>
             <div class="col s4">
-                <h2>{{ AST }}</h2>
+                <h2>{{ object.AST }}</h2>
             </div>
         </div>
             <script src="./js/vue.js"></script>
             <script src="./js/SpifMain.js"></script>
+            <script src="./js/main.js"></script>
     </body>
 </html>
 
