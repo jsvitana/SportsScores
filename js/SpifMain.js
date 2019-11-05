@@ -16,8 +16,8 @@ const app = new Vue({
             ASS: '',
             HTS: '',
             ATS: '',
-            HFS: '',
-            AFS: '',
+            HLS: '',
+            ALS: '',
             HST: '',
             AST: ''
         }
@@ -120,13 +120,13 @@ const app = new Vue({
             this.object.HFS = homeFirstScore;
             this.object.HSS = homeSecondScore;
             this.object.HTS = homeThirdScore;
-            this.object.HFS = homeFourthScore;
+            this.object.HLS = homeFourthScore;
             this.object.Aname = awayName;
             this.object.AST = awayScoreTotal;
             this.object.AFS = awayFirstScore;
             this.object.ASS = awaySecondScore;
             this.object.ATS = awayThirdScore;
-            this.object.AFS = awayFourthScore;
+            this.object.ALS = awayFourthScore;
             this.object.clock = time;
             this.object.down = down2;
             this.object.togo = yardToGo;
