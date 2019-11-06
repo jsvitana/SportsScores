@@ -75,10 +75,10 @@ const app = new Vue({
             else if (homeName == "NE"){homeName = "New England Patriots";}
             else if (homeName == "NYG"){homeName = "New York Giants";}
             else if (homeName == "DAL"){homeName = "Dallas Cowboys";}
-            else if (homeName == ""){homeName = "";}
-            else if (homeName == ""){homeName = "";}
-            else if (homeName == ""){homeName = "";}
-            else if (homeName == ""){homeName = "";}
+            else if (homeName == "LA"){homeName = "Los Angeles Rams";}
+            else if (homeName == "NO"){homeName = "New Orleans Saints";}
+            else if (homeName == "CIN"){homeName = "Cincinnati Bengals";}
+            else if (homeName == "ATL"){homeName = "Atlanta Falcons";}
             //else{homeName = "An Error has occured";}
 
             if(awayName == "JAC"){awayName = "Jacksonville Jaguars";}
@@ -109,10 +109,10 @@ const app = new Vue({
             else if (awayName == "NE"){awayName = "New England Patriots";}
             else if (awayName == "NYG"){awayName = "New York Giants";}
             else if (awayName == "DAL"){awayName = "Dallas Cowboys";}
-            else if (awayName == ""){awayName = "";}
-            else if (awayName == ""){awayName = "";}
-            else if (awayName == ""){awayName = "";}
-            else if (awayName == ""){awayName = "";}
+            else if (awayName == "LA"){awayName = "Los Angeles Rams";}
+            else if (awayName == "NO"){awayName = "New Orleans Saints";}
+            else if (awayName == "CIN"){awayName = "Cincinnati Bengals";}
+            else if (awayName == "ATL"){awayName = "Atlanta Falcons";}
             //else{awayName = "An Error has occured";}
             
             this.object.Hname = homeName;
