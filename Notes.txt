@@ -1,0 +1,1 @@
+check for team abbr if they are playing this week
