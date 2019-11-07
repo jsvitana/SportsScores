@@ -1,2 +1,3 @@
 check for team abbr if they are playing this week
 Add a game start time
+make seperate route for betting
